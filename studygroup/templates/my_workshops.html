@@ -8,12 +8,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <title>Study Group App</title>
+    <title>Study Group</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
-        <a href="{{url_for('index')}}" class="navbar-brand">
-            <h3 class="mb-0 px-3">Study Group App</h3>
+        <a href="{{url_for('main')}}" class="navbar-brand">
+            <h3 class="mb-0 px-3">Study Group</h3>
         </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a href="{{url_for('my_workshops')}}" class="nav-link">My Workshops</a>
+                  <a href="{{url_for('my_workshops')}}" class="nav-link">My Sessions</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#classModal">Create a session</a>
                 </li>
             </ul>
         </div>
@@ -29,48 +32,29 @@
     
     <div class = "container mb-4">
         <h1> Workshops I've signed up for</h1>
-        <div class="card mb-3">
-            <div class="row">
-                <div class="col-md-4" style="max-height: 250px; max-width: 200px;">
-                    <img src = "placeholder.jpeg" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                    <h5 class="card-title">Class 1</h5>
-                    <p class="card-text">Date & Time</p>
-                    <p class="card-text">Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit iste. Perspiciatis maxime exercitationem delectus tempore eius. Excepturi, pariatur voluptatem?</p>
-                    <p class="card-text">Instructor Bio - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur aliquid earum voluptates doloremque ipsum similique odio quidem ad ea!</p>
+        {% for i in range (2): %}
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-4" style="max-height: 250px; max-width: 200px;">
+                        <img src = "../static/img/placeholder.jpeg" class="card-img" alt="...">
                     </div>
-                </div>
-                <div class = "row">
-                    <div class = "col offset-4 mb-3">
-                        <a href="#" class="btn btn-primary">Cancel</a>
-                        <a href="#" class = "btn btn-primary">Learn more</a>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Class {{ i + 1 }}</h5>
+                        <p class="card-text">Date & Time</p>
+                        <p class="card-text">Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit iste. Perspiciatis maxime exercitationem delectus tempore eius. Excepturi, pariatur voluptatem?</p>
+                        <p class="card-text">Instructor Bio - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur aliquid earum voluptates doloremque ipsum similique odio quidem ad ea!</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3">
-            <div class="row">
-                <div class="col-md-4" style="max-height: 250px; max-width: 200px;">
-                    <img src = "placeholder.jpeg" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                    <h5 class="card-title">Class 2</h5>
-                    <p class="card-text">Date & Time</p>
-                    <p class="card-text">Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit iste. Perspiciatis maxime exercitationem delectus tempore eius. Excepturi, pariatur voluptatem?</p>
-                    <p class="card-text">Instructor Bio - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur aliquid earum voluptates doloremque ipsum similique odio quidem ad ea!</p>
-                    </div>
-                </div>
-                <div class = "row">
-                    <div class = "col offset-4 mb-3">
-                        <a href="#" class="btn btn-primary">Cancel</a>
-                        <a href="#" class = "btn btn-primary">Learn More</a>
+                    <div class = "row">
+                        <div class = "col offset-4 mb-3">
+                            <a href="#" class="btn btn-primary">Cancel</a>
+                            <a href="#" class = "btn btn-primary">Learn more</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
 
     <div class = "container">
@@ -79,49 +63,110 @@
 
     <div class = "container">
         <h1>Workshops I am hosting</h1>
-        <div class="card mb-3">
-            <div class="row">
-                <div class="col-md-4" style="max-height: 250px; max-width: 200px;">
-                    <img src = "placeholder.jpeg" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                    <h5 class="card-title">Class 1</h5>
-                    <p class="card-text">Date & Time</p>
-                    <p class="card-text">Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit iste. Perspiciatis maxime exercitationem delectus tempore eius. Excepturi, pariatur voluptatem?</p>
-                    <p class="card-text">Instructor Bio - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur aliquid earum voluptates doloremque ipsum similique odio quidem ad ea!</p>
+        {% for i in range (2): %}
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-4" style="max-height: 250px; max-width: 200px;">
+                        <img src = "../static/img/placeholder.jpeg" class="card-img" alt="...">
                     </div>
-                </div>
-                <div class = "row">
-                    <div class = "col offset-4 mb-3">
-                        <a href="#" class="btn btn-primary">Cancel</a>
-                        <a href="#" class = "btn btn-primary">Edit</a>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Class {{ i + 1 }}</h5>
+                        <p class="card-text">Date & Time</p>
+                        <p class="card-text">Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit iste. Perspiciatis maxime exercitationem delectus tempore eius. Excepturi, pariatur voluptatem?</p>
+                        <p class="card-text">Instructor Bio - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur aliquid earum voluptates doloremque ipsum similique odio quidem ad ea!</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3">
-            <div class="row">
-                <div class="col-md-4" style="max-height: 250px; max-width: 200px;">
-                    <img src = "placeholder.jpeg" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                    <h5 class="card-title">Class 2</h5>
-                    <p class="card-text">Date & Time</p>
-                    <p class="card-text">Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit iste. Perspiciatis maxime exercitationem delectus tempore eius. Excepturi, pariatur voluptatem?</p>
-                    <p class="card-text">Instructor Bio - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur aliquid earum voluptates doloremque ipsum similique odio quidem ad ea!</p>
-                    </div>
-                </div>
-                <div class = "row">
-                    <div class = "col offset-4 mb-3">
-                        <a href="#" class="btn btn-primary">Cancel</a>
-                        <a href="#" class = "btn btn-primary">Edit</a>
+                    <div class = "row">
+                        <div class = "col offset-4 mb-3">
+                            <a href="#" class="btn btn-primary">Cancel</a>
+                            <a href="#" class = "btn btn-primary">Edit</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
+
+        <!-- Modal -->
+    <div class="modal fade" id="classModal" tabindex="-1" aria-labelledby="classModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="classModalLabel">Create a workshop!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="title" class="col-form-label">Title:</label>
+                <input type="text" class="form-control" id="title">
+              </div>
+              <div class="mb-3">
+                <label for="description" class="col-form-label">Description:</label>
+                <textarea class="form-control" id="description"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="bio" class="col-form-label">Your Bio:</label>
+                <textarea class="form-control" id="bio"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="time" class="col-form-label">Time:</label>
+                <input type = "time" class="form-control" id="time"></input>
+              </div>
+              <div class="mb-3">
+                <label for="date" class="col-form-label">Date:</label>
+                <input type = "date" class="form-control" id="date"></input>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="classModal" tabindex="-1" aria-labelledby="classModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="classModalLabel">Create a workshop!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="title" class="col-form-label">Title:</label>
+                  <input type="text" class="form-control" id="title">
+                </div>
+                <div class="mb-3">
+                  <label for="description" class="col-form-label">Description:</label>
+                  <textarea class="form-control" id="description"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="bio" class="col-form-label">Your Bio:</label>
+                  <textarea class="form-control" id="bio"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="time" class="col-form-label">Time:</label>
+                  <input type = "time" class="form-control" id="time"></input>
+                </div>
+                <div class="mb-3">
+                  <label for="date" class="col-form-label">Date:</label>
+                  <input type = "date" class="form-control" id="date"></input>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     
 
