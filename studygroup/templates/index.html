@@ -12,7 +12,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
-      <a href="index.html" class="navbar-brand">
+      <a href="{{url_for('index')}}" class="navbar-brand">
           <h3 class="mb-0 px-3">Study Group App</h3>
       </a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNavbar">
@@ -21,7 +21,9 @@
       <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
           <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                  <a href="my_workshops.html" class="nav-link">My Workshops</a>
+                <a href="{{url_for('my_workshops')}}" class="nav-link">My Workshops</a>
+              </li>
+          </ul>
       </div>
     </nav>
     
@@ -29,7 +31,7 @@
     <div class = "container d-flex justify-content-center">
       <div class "container text-white text-center">
         <h1> Welcome to NAME HERE!</h1>
-        <a class = "btn btn-primary" href="main.html">Search for a workshop!</a>
+        <a class = "btn btn-primary" href="{{url_for('main')}}">Search for a workshop!</a>
         <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#classModal">
           Create a workshop!
         </a>

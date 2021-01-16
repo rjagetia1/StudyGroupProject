@@ -12,7 +12,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
-        <a href="index.html" class="navbar-brand">
+        <a href="{{url_for('index')}}" class="navbar-brand">
             <h3 class="mb-0 px-3">Study Group App</h3>
         </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNavbar">
@@ -21,9 +21,11 @@
         <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="my_workshops.html" class="nav-link">My Workshops</a>
+                  <a href="{{url_for('my_workshops')}}" class="nav-link">My Workshops</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+      </nav>
     
     <div class = "container mb-4">
         <h1> Workshops I've signed up for</h1>
@@ -94,7 +96,6 @@
                     <div class = "col offset-4 mb-3">
                         <a href="#" class="btn btn-primary">Cancel</a>
                         <a href="#" class = "btn btn-primary">Edit</a>
-                        <a href="#" class = "btn btn-primary">Reschedule</a>
                     </div>
                 </div>
             </div>
@@ -116,7 +117,6 @@
                     <div class = "col offset-4 mb-3">
                         <a href="#" class="btn btn-primary">Cancel</a>
                         <a href="#" class = "btn btn-primary">Edit</a>
-                        <a href="#" class = "btn btn-primary">Reschedule</a>
                     </div>
                 </div>
             </div>
