@@ -47,7 +47,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>StudyGroupProject/models.py at db · rjagetia1/StudyGroupProject</title>
+  <title>StudyGroupProject/db_init.py at db · rjagetia1/StudyGroupProject</title>
     <meta name="description" content="Web app for creating and attending user workshops. Contribute to rjagetia1/StudyGroupProject development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -61,11 +61,11 @@
     
 
   <link rel="assets" href="https://github.githubassets.com/">
-    <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/47397877/ws?session=eyJ2IjoiVjMiLCJ1Ijo0NzM5Nzg3NywicyI6NjI5ODI0NTk5LCJjIjoyMDQ4NTQ1NDYsInQiOjE2MTA4NDYwMDR9--eb944856e53aae2a6cc258e10598ff0c48b200e43b3aa0daf89999ce38192a35" data-refresh-url="/_alive">
+    <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/47397877/ws?session=eyJ2IjoiVjMiLCJ1Ijo0NzM5Nzg3NywicyI6NjI5ODI0NTk5LCJjIjozNDQzNDYyNzc5LCJ0IjoxNjEwODQ1OTY1fQ==--b656925f597b9e0c7ecf2cbfd1712fbe4d8775fbf1cbd983bc3535bd323c799b" data-refresh-url="/_alive">
     <link rel="shared-web-socket-src" href="/socket-worker-5029ae85.js">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
 
-  <meta name="request-id" content="D9D4:1466:F731D1:182430A:60038F28" data-pjax-transient="true" /><meta name="html-safe-nonce" content="826505756203754a3c309981cb19944a48e0773696e64a1986241b3f1dd9c28b" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9yamFnZXRpYTEvU3R1ZHlHcm91cFByb2plY3QvdHJlZS9kYi9zdHVkeWdyb3VwIiwicmVxdWVzdF9pZCI6IkQ5RDQ6MTQ2NjpGNzMxRDE6MTgyNDMwQTo2MDAzOEYyOCIsInZpc2l0b3JfaWQiOiI3ODc4MTEzMTI3OTgzMTg5NjE3IiwicmVnaW9uX2VkZ2UiOiJpYWQiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-pjax-transient="true" /><meta name="visitor-hmac" content="6e705ad68ba19d3e09df38df78da7f5bba6442aa58be3a68e44e34a3003658b6" data-pjax-transient="true" />
+  <meta name="request-id" content="D9D5:6DBE:1515EB4:1EF4198:60038F06" data-pjax-transient="true" /><meta name="html-safe-nonce" content="826505756203754a3c309981cb19944a48e0773696e64a1986241b3f1dd9c28b" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9yamFnZXRpYTEvU3R1ZHlHcm91cFByb2plY3QvdHJlZS9kYiIsInJlcXVlc3RfaWQiOiJEOUQ1OjZEQkU6MTUxNUVCNDoxRUY0MTk4OjYwMDM4RjA2IiwidmlzaXRvcl9pZCI6Ijc4NzgxMTMxMjc5ODMxODk2MTciLCJyZWdpb25fZWRnZSI6ImlhZCIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==" data-pjax-transient="true" /><meta name="visitor-hmac" content="49787c260f0fe8434800c77f3d6f62e42b0c1542eb88c2f3bff9ca610ea6f427" data-pjax-transient="true" />
 
     <meta name="hovercard-subject-tag" content="repository:330223100" data-pjax-transient>
 
@@ -104,7 +104,7 @@
 
       <meta name="expected-hostname" content="github.com">
 
-      <meta name="js-proxy-site-detection-payload" content="NDc2NDBmOTkwMWE1Y2RiMTM0N2Y3ODA1NGI1NjcxMDFmOWE4NjNhOGEyODYwMmM2ZDQ0MTczZDBhNWYwYWM5Znx7InJlbW90ZV9hZGRyZXNzIjoiMTczLjg4LjE3My41IiwicmVxdWVzdF9pZCI6IkQ5RDQ6MTQ2NjpGNzMxRDE6MTgyNDMwQTo2MDAzOEYyOCIsInRpbWVzdGFtcCI6MTYxMDg0NjAwNCwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+      <meta name="js-proxy-site-detection-payload" content="ZDJhYWY1ZWNlZTljZDQ2Mjg0ZWM1OTg0NjA4M2QzMjljMzkwZWQ4YzNiZDQ4ZWYwZTljMTE1OTc3ZmZjMDYzZnx7InJlbW90ZV9hZGRyZXNzIjoiMTczLjg4LjE3My41IiwicmVxdWVzdF9pZCI6IkQ5RDU6NkRCRToxNTE1RUI0OjFFRjQxOTg6NjAwMzhGMDYiLCJ0aW1lc3RhbXAiOjE2MTA4NDU5NjUsImhvc3QiOiJnaXRodWIuY29tIn0=">
 
     <meta name="enabled-features" content="MARKETPLACE_PENDING_INSTALLATIONS,JS_HTTP_CACHE_HEADERS,TASK_LIST_AUTOCOMPLETE,MULTI_WORD_SUGGESTER">
 
@@ -119,7 +119,7 @@
 
 
 
-    <link rel="canonical" href="https://github.com/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/rjagetia1/StudyGroupProject/blob/db/db_init.py" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -193,7 +193,7 @@
           spellcheck="false"
           autocomplete="off"
           >
-          <input type="hidden" value="viw8/lHPlw78eysiQ+Wtzehbjqym76RTcYz4TKMiTx7/s7YTO4aJbvlqglOgbSxx3uAM8DLSqSFAqBoakgEAng==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
+          <input type="hidden" value="z0hD23MYln+AF6BB1o1v/k+b7FQFLRtmjhNdn/mz3+2O18k2GVGIH4UGCTA1Be5CeSBuCJEQFhS/N7/JyJCQbQ==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
           <input type="hidden" class="js-site-search-type-field" name="type" >
             <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
 
@@ -381,7 +381,7 @@
       <img class="avatar avatar-user" src="https://avatars2.githubusercontent.com/u/47397877?s=40&amp;v=4" width="20" height="20" alt="@rjagetia1" />
       rjagetia1
 </a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="8QAMt9Uz7fcYjGnvPWMq+siJh/n16pydFrg92qjc8/Mel6rpYn40uTFRbJibnEuAYU78nLpYWqJ1O77LmGWUog==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="cm7vgc8VJwLmufr/In3qPnwx8aMQsDwp4v4MRnlSWt+d+UnfeFj+TM9k/4iEgotE1faKxl8C+haBfY9XSes9jg==" />
       <button type="submit" class="Header-link mr-0 mr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade-15 d-md-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
         <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 010 1.5h-2.5A1.75 1.75 0 012 13.25V2.75zm10.44 4.5H6.75a.75.75 0 000 1.5h5.69l-1.97 1.97a.75.75 0 101.06 1.06l3.25-3.25a.75.75 0 000-1.06l-3.25-3.25a.75.75 0 10-1.06 1.06l1.97 1.97z"></path></svg>
         Sign out
@@ -401,7 +401,7 @@
     <div class="Header-item mr-0 mr-md-3 flex-order-1 flex-md-order-none">
         
 
-    <notification-indicator class="js-socket-channel" data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6NDczOTc4NzciLCJ0IjoxNjEwODQ2MDA0fQ==--e736b322f791d65b3325125506945013f5a1558db2f90147efcd55bd4bc1e045">
+    <notification-indicator class="js-socket-channel" data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6NDczOTc4NzciLCJ0IjoxNjEwODQ1OTY1fQ==--b67b4e1b1b01f7a94576084414701fc13f6846a5ccd6ccc528a556ac0dacaced">
       <a href="/notifications"
          class="Header-link notification-indicator position-relative tooltipped tooltipped-sw"
          
@@ -580,7 +580,7 @@
         data-action="toggle:notifications-list-subscription-form#detailsToggled"
       >
 
-      <summary class="btn btn-sm rounded-right-0" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:330223100,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="9bf7d2dbc70efce39d5389bb4812e09552ad12da279b865f4e81d37ddf338fb6" data-ga-click="Repository, click Watch settings, action:blob#show" aria-label="Notifications settings">
+      <summary class="btn btn-sm rounded-right-0" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:330223100,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/db_init.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="f25624a89547cd40c903582b2da3ac1215bd9daf2cf087b8d3296c2229210c4f" data-ga-click="Repository, click Watch settings, action:blob#show" aria-label="Notifications settings">
           <span data-menu-button>
             <span
               
@@ -624,7 +624,7 @@
             </header>
 
             <div class="SelectMenu-list">
-              <form data-target="notifications-list-subscription-form.form" data-action="submit:notifications-list-subscription-form#submitForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="xmpIlVDZAUvCYeOHbra2F2UKK75JiYPnB21eyth1f3diMS8EeDoXzPE63hwR6DBSVb55a/WZ0JtR0HcUFckTrQ==" />
+              <form data-target="notifications-list-subscription-form.form" data-action="submit:notifications-list-subscription-form#submitForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="M7c9VHL0KL31tu2r/kO3xWp4nEm1NhO/uBQgxXCe+c2X7FrFWhc+Osbt0DCBHTGAWszOnAkmQMPuqQkbvSKVFw==" />
 
                 <input type="hidden" name="repository_id" value="330223100">
 
@@ -726,7 +726,7 @@
 
         <details-dialog class="notifications-component-dialog " data-target="notifications-list-subscription-form.customDialog" hidden>
           <div class="SelectMenu-modal notifications-component-dialog-modal overflow-visible">
-            <form data-target="notifications-list-subscription-form.customform" data-action="submit:notifications-list-subscription-form#submitCustomForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="fpq6SZRWvuog3tZS9YXcucbLOZepDHxGk59frYhfR4/awd3YvLWobROF68mK21r89n9rQhUcLzrFInZzReMrVQ==" />
+            <form data-target="notifications-list-subscription-form.customform" data-action="submit:notifications-list-subscription-form#submitCustomForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="BopChi2+ivCrdZispFWnphOELhAyXRoOdTh+ievF0rCi0SUXBV2cd5gupTfbCyHjIzB8xY5NSXIjhVdXJnm+ag==" />
 
               <input type="hidden" name="repository_id" value="330223100">
 
@@ -863,9 +863,9 @@
 
   <li>
         <div class="d-block js-toggler-container js-social-container starring-container ">
-    <form class="starred js-social-form" action="/rjagetia1/StudyGroupProject/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="BWhMumbBQinn7OXP/b9cIOAiJNAp0dauebrlFw7233AHPY/AXS03ujtvjtFEGQ8ah/iBu+vcqZ5IuOkTnuAWxA==" />
+    <form class="starred js-social-form" action="/rjagetia1/StudyGroupProject/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="q6Vit9rIlhyrMChaf4eZWsQEmi2n2nINPCgGYGFFZbSp8KHN4STjj3ezQ0TGIcpgo94/RmXXDT0NKgpk8VOsAA==" />
       <input type="hidden" name="context" value="repository">
-      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Unstar rjagetia1/StudyGroupProject" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:330223100,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="746611b9267170476e5a09cccc9fcc8c25da85f732117b78052ef4f3c42ca969" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg class="octicon octicon-star-fill mr-1" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path></svg>
+      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Unstar rjagetia1/StudyGroupProject" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:330223100,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/db_init.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="d4db8c56b1c712896bb7f985d8179a7477d2ba6fb9be21fab01189b349cacd58" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg class="octicon octicon-star-fill mr-1" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path></svg>
         <span>
           Unstar
 </span></button>        <a class="social-count js-social-count" href="/rjagetia1/StudyGroupProject/stargazers"
@@ -873,9 +873,9 @@
            0
         </a>
 </form>
-    <form class="unstarred js-social-form" action="/rjagetia1/StudyGroupProject/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="MSP9h0/64nwB0U55JV2QTq1dKVdrNnqig4Gpj8SuiFREOe7nDrqyzMfZwX3/pnyQ29LDz/AZ/SLtiVuF7hMonQ==" />
+    <form class="unstarred js-social-form" action="/rjagetia1/StudyGroupProject/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="VL/VTzjK34xbfKD4mGNyqxCgM25BVazV8IWZ4UVP3WQhpcYveYqPPJ10L/xCmJ51Zi/Z9tp6K1WejWvrb/J9rQ==" />
       <input type="hidden" name="context" value="repository">
-      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Star rjagetia1/StudyGroupProject" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:330223100,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="75e3371b5520e546009aeab3bf6bf5c9f64067eb702fd0f0b0e913dd64556dd1" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg class="octicon octicon-star mr-1" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
+      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Star rjagetia1/StudyGroupProject" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:330223100,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/db_init.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="b889a60c2c31671c2a37bf305cae330e7e5b4dd595fd93b55a072268bd76696c" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg class="octicon octicon-star mr-1" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
         <span>
           Star
 </span></button>        <a class="social-count js-social-count" href="/rjagetia1/StudyGroupProject/stargazers"
@@ -1039,9 +1039,9 @@
   
 
 
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/rjagetia1/StudyGroupProject/blob/027ce020854c4bfcb41c7fed7f267bb37ddca8ba/studygroup/models.py">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/rjagetia1/StudyGroupProject/blob/027ce020854c4bfcb41c7fed7f267bb37ddca8ba/db_init.py">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v22:ab35e1951ca53157b6085b2aba86fc16975871e1df00d7cb2de74e4c6cce8cad -->
+    <!-- blob contrib key: blob_contributors:v22:e7dbe336c43c83e723213bd95196757b73fabe8dd7d3b13143e8d20dc5d39366 -->
 
     <div class="d-flex flex-items-start flex-shrink-0 pb-3 flex-wrap flex-md-nowrap flex-justify-between flex-md-justify-start">
       
@@ -1055,7 +1055,7 @@
       <span class="dropdown-caret"></span>
     </summary>
 
-    <details-menu class="SelectMenu SelectMenu--hasFilter" src="/rjagetia1/StudyGroupProject/refs/db/studygroup/models.py?source_action=show&amp;source_controller=blob" preload>
+    <details-menu class="SelectMenu SelectMenu--hasFilter" src="/rjagetia1/StudyGroupProject/refs/db/db_init.py?source_action=show&amp;source_controller=blob" preload>
       <div class="SelectMenu-modal">
         <include-fragment class="SelectMenu-loading" aria-label="Menu is loading">
           <svg class="octicon octicon-octoface anim-pulse" height="32" viewBox="0 0 24 24" version="1.1" width="32" aria-hidden="true"><path d="M7.75 11c-.69 0-1.25.56-1.25 1.25v1.5a1.25 1.25 0 102.5 0v-1.5C9 11.56 8.44 11 7.75 11zm1.27 4.5a.469.469 0 01.48-.5h5a.47.47 0 01.48.5c-.116 1.316-.759 2.5-2.98 2.5s-2.864-1.184-2.98-2.5zm7.23-4.5c-.69 0-1.25.56-1.25 1.25v1.5a1.25 1.25 0 102.5 0v-1.5c0-.69-.56-1.25-1.25-1.25z"></path><path fill-rule="evenodd" d="M21.255 3.82a1.725 1.725 0 00-2.141-1.195c-.557.16-1.406.44-2.264.866-.78.386-1.647.93-2.293 1.677A18.442 18.442 0 0012 5c-.93 0-1.784.059-2.569.17-.645-.74-1.505-1.28-2.28-1.664a13.876 13.876 0 00-2.265-.866 1.725 1.725 0 00-2.141 1.196 23.645 23.645 0 00-.69 3.292c-.125.97-.191 2.07-.066 3.112C1.254 11.882 1 13.734 1 15.527 1 19.915 3.13 23 12 23c8.87 0 11-3.053 11-7.473 0-1.794-.255-3.647-.99-5.29.127-1.046.06-2.15-.066-3.125a23.652 23.652 0 00-.689-3.292zM20.5 14c.5 3.5-1.5 6.5-8.5 6.5s-9-3-8.5-6.5c.583-4 3-6 8.5-6s7.928 2 8.5 6z"></path></svg>
@@ -1067,9 +1067,9 @@
 </div>
 
       <h2 id="blob-path" class="breadcrumb flex-auto min-width-0 text-normal mx-0 mx-md-3 width-full width-md-auto flex-order-1 flex-md-order-none mt-3 mt-md-0">
-        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/rjagetia1/StudyGroupProject/tree/db"><span>StudyGroupProject</span></a></span></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/rjagetia1/StudyGroupProject/tree/db/studygroup"><span>studygroup</span></a></span><span class="separator">/</span><strong class="final-path">models.py</strong>
+        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/rjagetia1/StudyGroupProject/tree/db"><span>StudyGroupProject</span></a></span></span><span class="separator">/</span><strong class="final-path">db_init.py</strong>
           <span class="separator">/</span><details class="details-reset details-overlay d-inline" id="jumpto-symbol-select-menu">
-  <summary class="btn-link link-gray css-truncate" aria-haspopup="true" data-hotkey="r" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_blob_definitions&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_blob_definitions&quot;,&quot;repository_id&quot;:330223100,&quot;ref&quot;:&quot;db&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="70f5c53d4bbde886b60f5ff7fc8995be2407b8861f8f5f815374712dff8a8d1f">
+  <summary class="btn-link link-gray css-truncate" aria-haspopup="true" data-hotkey="r" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_blob_definitions&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_blob_definitions&quot;,&quot;repository_id&quot;:330223100,&quot;ref&quot;:&quot;db&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/db_init.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="9714281937d82b4091ede0a6cf78b20416e934c3e9619eaaf3bfffcd0c8bbc0b">
       <svg class="octicon octicon-code" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"></path></svg>
     <span data-menu-button>Jump to</span>
     <span class="dropdown-caret"></span>
@@ -1095,23 +1095,7 @@
         </div>
       <div class="SelectMenu-list">
         <div data-filterable-for="jumpto-symbols-filter-field" data-filterable-type="substring">
-            <a class="SelectMenu-item d-flex flex-justify-between css-truncate" role="menuitemradio" aria-checked="false" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.navigate_to_blob_definition&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;navigate_to_blob_definition&quot;,&quot;repository_id&quot;:330223100,&quot;ref&quot;:&quot;db&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="1f57dbd48f803b2f9e1149b7818688bfbbf743e48e8bc22b8b759aa520289ad9" href="/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py#L18">
-              <svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>
-              <span class="flex-auto css-truncate-target" data-menu-button-text>User</span>
-              <span class="flex-auto d-flex flex-justify-end">Class</span>
-</a>            <a class="SelectMenu-item d-flex flex-justify-between css-truncate" role="menuitemradio" aria-checked="false" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.navigate_to_blob_definition&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;navigate_to_blob_definition&quot;,&quot;repository_id&quot;:330223100,&quot;ref&quot;:&quot;db&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="1f57dbd48f803b2f9e1149b7818688bfbbf743e48e8bc22b8b759aa520289ad9" href="/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py#L29">
-              <svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>
-              <span class="flex-auto css-truncate-target" data-menu-button-text>__repr__</span>
-              <span class="flex-auto d-flex flex-justify-end">Function</span>
-</a>            <a class="SelectMenu-item d-flex flex-justify-between css-truncate" role="menuitemradio" aria-checked="false" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.navigate_to_blob_definition&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;navigate_to_blob_definition&quot;,&quot;repository_id&quot;:330223100,&quot;ref&quot;:&quot;db&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="1f57dbd48f803b2f9e1149b7818688bfbbf743e48e8bc22b8b759aa520289ad9" href="/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py#L35">
-              <svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>
-              <span class="flex-auto css-truncate-target" data-menu-button-text>Workshop</span>
-              <span class="flex-auto d-flex flex-justify-end">Class</span>
-</a>            <a class="SelectMenu-item d-flex flex-justify-between css-truncate" role="menuitemradio" aria-checked="false" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.navigate_to_blob_definition&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;navigate_to_blob_definition&quot;,&quot;repository_id&quot;:330223100,&quot;ref&quot;:&quot;db&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="1f57dbd48f803b2f9e1149b7818688bfbbf743e48e8bc22b8b759aa520289ad9" href="/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py#L53">
-              <svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>
-              <span class="flex-auto css-truncate-target" data-menu-button-text>__repr__</span>
-              <span class="flex-auto d-flex flex-justify-end">Function</span>
-</a>        </div>
+        </div>
       </div>
       <footer class="SelectMenu-footer">
         <div class="d-flex flex-justify-between">
@@ -1137,7 +1121,7 @@
 </summary>  <div>
     <ul class="dropdown-menu dropdown-menu-sw">
             <li class="d-block d-md-none">
-              <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:330223100,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="996ce4d26ea229df445ce7791285e309d2991eeb266a628b56ffa394725949a0" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" data-pjax="true" href="/rjagetia1/StudyGroupProject/find/db">
+              <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:330223100,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/db_init.py&quot;,&quot;user_id&quot;:47397877}}" data-hydro-click-hmac="c8c956b6093a2c375ccdff6c667729f1b9d4f9ed59f8f7f6a5161b1bdf47210b" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" data-pjax="true" href="/rjagetia1/StudyGroupProject/find/db">
                 <span class="flex-auto">Go to file</span>
                 <span class="text-small text-gray" aria-hidden="true">T</span>
 </a>            </li>
@@ -1159,7 +1143,7 @@
             </li>
             <li class="dropdown-divider" role="none"></li>
             <li>
-              <clipboard-copy value="studygroup/models.py" class="dropdown-item cursor-pointer" data-toggle-for="blob-more-options-details">
+              <clipboard-copy value="db_init.py" class="dropdown-item cursor-pointer" data-toggle-for="blob-more-options-details">
                 Copy path
               </clipboard-copy>
             </li>
@@ -1169,17 +1153,76 @@
 
 
     <div class="Box d-flex flex-column flex-shrink-0 mb-3">
-      <include-fragment src="/rjagetia1/StudyGroupProject/contributors/db/studygroup/models.py" class="commit-loader">
-        <div class="Box-header Box-header--blue d-flex flex-items-center">
-          <div class="Skeleton avatar avatar-user flex-shrink-0 ml-n1 mr-n1 mt-n1 mb-n1" style="width:24px;height:24px;"></div>
-          <div class="Skeleton Skeleton--text col-5 ml-2">&nbsp;</div>
-        </div>
+      
+  <div class="Box-header Box-header--blue Details js-details-container">
+      <div class="d-flex flex-items-center">
+        <span class="flex-shrink-0 ml-n1 mr-n1 mt-n1 mb-n1">
+          <a rel="contributor" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/oleggolev/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/oleggolev"><img class="avatar avatar-user" src="https://avatars2.githubusercontent.com/u/60023842?s=48&amp;v=4" width="24" height="24" alt="@oleggolev" /></a>
+        </span>
+        <div class="flex-1 d-flex flex-items-center ml-3 min-width-0">
+          <div class="css-truncate css-truncate-overflow">
+            <a class="text-bold link-gray-dark" rel="contributor" data-hovercard-type="user" data-hovercard-url="/users/oleggolev/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/oleggolev">oleggolev</a>
 
-        <div class="Box-body d-flex flex-items-center" >
-          <div class="Skeleton Skeleton--text col-1">&nbsp;</div>
-          <span class="text-red h6 loader-error">Cannot retrieve contributors at this time</span>
+              <span>
+                <a data-pjax="true" title="models and dbf.py" class="link-gray" href="/rjagetia1/StudyGroupProject/commit/027ce020854c4bfcb41c7fed7f267bb37ddca8ba">models and dbf.py</a>
+              </span>
+          </div>
+
+
+          <span class="ml-2">
+            <include-fragment accept="text/fragment+html" src="/rjagetia1/StudyGroupProject/commit/027ce020854c4bfcb41c7fed7f267bb37ddca8ba/rollup?direction=e" class="d-inline"></include-fragment>
+          </span>
         </div>
-</include-fragment>    </div>
+        <div class="ml-3 d-flex flex-shrink-0 flex-items-center flex-justify-end text-gray no-wrap">
+          <span class="d-none d-md-inline">
+            <span>Latest commit</span>
+            <a class="text-small text-mono link-gray" href="/rjagetia1/StudyGroupProject/commit/027ce020854c4bfcb41c7fed7f267bb37ddca8ba" data-pjax>027ce02</a>
+            <span itemprop="dateModified"><relative-time datetime="2021-01-17T00:54:06Z" class="no-wrap">Jan 16, 2021</relative-time></span>
+          </span>
+
+          <a data-pjax href="/rjagetia1/StudyGroupProject/commits/db/db_init.py" class="ml-3 no-wrap link-gray-dark no-underline">
+            <svg class="octicon octicon-history text-gray" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"></path></svg>
+            <span class="d-none d-sm-inline">
+              <strong>History</strong>
+            </span>
+          </a>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="Box-body d-flex flex-items-center flex-auto border-bottom-0 flex-wrap" >
+    <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark float-left mr-3" id="blob_contributors_box">
+      <summary class="link-gray-dark">
+        <svg class="octicon octicon-people text-gray" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z"></path></svg>
+        <strong>1</strong>
+        
+        contributor
+      </summary>
+      <details-dialog
+        class="Box Box--overlay d-flex flex-column anim-fade-in fast"
+        aria-label="Users who have contributed to this file"
+        src="/rjagetia1/StudyGroupProject/contributors-list/db/db_init.py" preload>
+        <div class="Box-header">
+          <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
+            <svg class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg>
+          </button>
+          <h3 class="Box-title">
+            Users who have contributed to this file
+          </h3>
+        </div>
+        <include-fragment>
+          <svg viewBox="0 0 16 16" fill="none" style="box-sizing: content-box; color: var(--color-icon-primary);" class="my-3 mx-auto d-block" width="32" height="32">
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" />
+  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke">
+    <animateTransform attributeName="transform" type="rotate" from="0 8 8" to="360 8 8" dur="1s" repeatCount="indefinite" />
+  </path>
+</svg>
+        </include-fragment>
+      </details-dialog>
+    </details>
+  </div>
+    </div>
 
 
 
@@ -1192,34 +1235,34 @@
 <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
   <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
 
-      56 lines (36 sloc)
+      6 lines (5 sloc)
       <span class="file-info-divider"></span>
-    1.97 KB
+    121 Bytes
   </div>
 
   <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between">
 
     <div class="BtnGroup">
-      <a href="/rjagetia1/StudyGroupProject/raw/db/studygroup/models.py" id="raw-url" role="button" class="btn btn-sm BtnGroup-item ">Raw</a>
-        <a href="/rjagetia1/StudyGroupProject/blame/db/studygroup/models.py" data-hotkey="b" role="button" class="btn js-update-url-with-hash btn-sm BtnGroup-item ">Blame</a>
+      <a href="/rjagetia1/StudyGroupProject/raw/db/db_init.py" id="raw-url" role="button" class="btn btn-sm BtnGroup-item ">Raw</a>
+        <a href="/rjagetia1/StudyGroupProject/blame/db/db_init.py" data-hotkey="b" role="button" class="btn js-update-url-with-hash btn-sm BtnGroup-item ">Blame</a>
     </div>
 
     <div>
           <a class="btn-octicon tooltipped tooltipped-nw js-remove-unless-platform"
              data-platforms="windows,mac"
-             href="x-github-client://openRepo/https://github.com/rjagetia1/StudyGroupProject?branch=db&amp;filepath=studygroup%2Fmodels.py"
+             href="x-github-client://openRepo/https://github.com/rjagetia1/StudyGroupProject?branch=db&amp;filepath=db_init.py"
              aria-label="Open this file in GitHub Desktop"
              data-ga-click="Repository, open with desktop">
               <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.75 2.5h12.5a.25.25 0 01.25.25v7.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25v-7.5a.25.25 0 01.25-.25zM14.25 1H1.75A1.75 1.75 0 000 2.75v7.5C0 11.216.784 12 1.75 12h3.727c-.1 1.041-.52 1.872-1.292 2.757A.75.75 0 004.75 16h6.5a.75.75 0 00.565-1.243c-.772-.885-1.193-1.716-1.292-2.757h3.727A1.75 1.75 0 0016 10.25v-7.5A1.75 1.75 0 0014.25 1zM9.018 12H6.982a5.72 5.72 0 01-.765 2.5h3.566a5.72 5.72 0 01-.765-2.5z"></path></svg>
           </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/rjagetia1/StudyGroupProject/edit/db/studygroup/models.py" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="wpnvd1ahF4xfmp49+WhpHxMlKOd/KOXJw81e6E+yI8gc8+Qj2v8cFys5F+bZeqF0oRKmg887Xuv1PQNZfSrfpQ==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/rjagetia1/StudyGroupProject/edit/db/db_init.py" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="Uwb65kfOuw6PuvHwZ63UDEvwT1ZAI5RLgGfNyL8bIlb2bEKtOfBOSNfSJKFCEpAk/h8HIs9C2H/VVSpRgwJuVw==" />
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Edit this file" data-hotkey="e" data-disable-with>
               <svg class="octicon octicon-pencil" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25a1.75 1.75 0 01.445-.758l8.61-8.61zm1.414 1.06a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086zM11.189 6.25L9.75 4.81l-6.286 6.287a.25.25 0 00-.064.108l-.558 1.953 1.953-.558a.249.249 0 00.108-.064l6.286-6.286z"></path></svg>
             </button>
 </form>
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/rjagetia1/StudyGroupProject/delete/db/studygroup/models.py" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="4TuxEUlacqNXHvUs33njodjnnPgT5V9hxYssi2wBKHYho7hsknQu/m6VkdvHk8YszhxK4e1PJwuhfTihcQ6tPg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/rjagetia1/StudyGroupProject/delete/db/db_init.py" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="Qlgj+im3Yxz7WbEQIAVy15VRMLOhfNLV7D6fc8DR2NsxXE7yfjaqYwpf9Q6tdIWePSPpewyc3T68YIIRLXfkTA==" />
             <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
               aria-label="Delete this file" data-disable-with>
               <svg class="octicon octicon-trashcan" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.5 1.75a.25.25 0 01.25-.25h2.5a.25.25 0 01.25.25V3h-3V1.75zm4.5 0V3h2.25a.75.75 0 010 1.5H2.75a.75.75 0 010-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75zM4.496 6.675a.75.75 0 10-1.492.15l.66 6.6A1.75 1.75 0 005.405 15h5.19c.9 0 1.652-.681 1.741-1.576l.66-6.6a.75.75 0 00-1.492-.149l-.66 6.6a.25.25 0 01-.249.225h-5.19a.25.25 0 01-.249-.225l-.66-6.6z"></path></svg>
@@ -1235,247 +1278,28 @@
 <table class="highlight tab-size js-file-line-container" data-tab-size="8" data-paste-markdown-skip>
       <tr>
         <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
-        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-c># -------------------------------------------------------------------------------</span></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class=pl-k>from</span> <span class=pl-s1>studygroup</span> <span class=pl-k>import</span> <span class=pl-s1>db</span></td>
       </tr>
       <tr>
         <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
-        <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class=pl-c># models.py</span></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class=pl-k>from</span> <span class=pl-s1>studygroup</span>.<span class=pl-s1>models</span> <span class=pl-k>import</span> <span class=pl-v>User</span>, <span class=pl-v>Workshop</span></td>
       </tr>
       <tr>
         <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
-        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class=pl-c># -------------------------------------------------------------------------------</span></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class=pl-s1>db</span>.<span class=pl-en>drop_all</span>()</td>
       </tr>
       <tr>
         <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class=pl-k>from</span> <span class=pl-s1>studygroup</span> <span class=pl-k>import</span> <span class=pl-s1>db</span></td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class=pl-s1>db</span>.<span class=pl-en>create_all</span>()</td>
       </tr>
       <tr>
         <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="LC6" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class=pl-c># -------------------------------------------------------------------------------</span></td>
-      </tr>
-      <tr>
-        <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
-        <td id="LC8" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="LC9" class="blob-code blob-code-inner js-file-line"><span class=pl-s1>junction_table</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Table</span>(</td>
-      </tr>
-      <tr>
-        <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line">    <span class=pl-s>&#39;signups&#39;</span>, <span class=pl-s1>db</span>.<span class=pl-v>Model</span>.<span class=pl-s1>metadata</span>,</td>
-      </tr>
-      <tr>
-        <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s>&#39;user_id&#39;</span>, <span class=pl-s1>db</span>.<span class=pl-v>Integer</span>, <span class=pl-s1>db</span>.<span class=pl-v>ForeignKey</span>(<span class=pl-s>&#39;user.id&#39;</span>)),</td>
-      </tr>
-      <tr>
-        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
-        <td id="LC12" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s>&#39;workshop_id&#39;</span>, <span class=pl-s1>db</span>.<span class=pl-v>Integer</span>, <span class=pl-s1>db</span>.<span class=pl-v>ForeignKey</span>(<span class=pl-s>&#39;workshop.id&#39;</span>)),</td>
-      </tr>
-      <tr>
-        <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
-        <td id="LC13" class="blob-code blob-code-inner js-file-line">)</td>
-      </tr>
-      <tr>
-        <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
-        <td id="LC14" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
-        <td id="LC15" class="blob-code blob-code-inner js-file-line"><span class=pl-c># -------------------------------------------------------------------------------</span></td>
-      </tr>
-      <tr>
-        <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
-        <td id="LC16" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
-        <td id="LC17" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
-        <td id="LC18" class="blob-code blob-code-inner js-file-line"><span class=pl-k>class</span> <span class=pl-v>User</span>(<span class=pl-s1>db</span>.<span class=pl-v>Model</span>):</td>
-      </tr>
-      <tr>
-        <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
-        <td id="LC19" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
-        <td id="LC20" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>__tablename__</span> <span class=pl-c1>=</span> <span class=pl-s>&#39;user&#39;</span></td>
-      </tr>
-      <tr>
-        <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
-        <td id="LC21" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
-        <td id="LC22" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>id</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>Integer</span>, <span class=pl-s1>primary_key</span><span class=pl-c1>=</span><span class=pl-c1>True</span>, <span class=pl-s1>autoincrement</span><span class=pl-c1>=</span><span class=pl-c1>True</span>)</td>
-      </tr>
-      <tr>
-        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
-        <td id="LC23" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>email</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>String</span>(<span class=pl-c1>500</span>), <span class=pl-s1>unique</span><span class=pl-c1>=</span><span class=pl-c1>True</span>, <span class=pl-s1>nullable</span><span class=pl-c1>=</span><span class=pl-c1>False</span>)</td>
-      </tr>
-      <tr>
-        <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
-        <td id="LC24" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>password</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>String</span>(<span class=pl-c1>100</span>), <span class=pl-s1>unique</span><span class=pl-c1>=</span><span class=pl-c1>False</span>, <span class=pl-s1>nullable</span><span class=pl-c1>=</span><span class=pl-c1>False</span>)</td>
-      </tr>
-      <tr>
-        <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
-        <td id="LC25" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
-        <td id="LC26" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>my_workshops</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-en>relationship</span>(<span class=pl-s>&#39;Workshop&#39;</span>, <span class=pl-s1>backref</span><span class=pl-c1>=</span><span class=pl-s>&#39;host&#39;</span>, <span class=pl-s1>lazy</span><span class=pl-c1>=</span><span class=pl-c1>True</span>)</td>
-      </tr>
-      <tr>
-        <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
-        <td id="LC27" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>workshops</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-en>relationship</span>(<span class=pl-s>&quot;Workshop&quot;</span>, <span class=pl-s1>secondary</span><span class=pl-c1>=</span><span class=pl-s1>junction_table</span>)</td>
-      </tr>
-      <tr>
-        <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
-        <td id="LC28" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
-        <td id="LC29" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>def</span> <span class=pl-en>__repr__</span>(<span class=pl-s1>self</span>):</td>
-      </tr>
-      <tr>
-        <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
-        <td id="LC30" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>return</span> <span class=pl-s>f&quot;User(&#39;<span class=pl-s1><span class=pl-kos>{</span><span class=pl-s1>self</span>.<span class=pl-s1>id</span><span class=pl-kos>}</span></span>&#39;, &#39;<span class=pl-s1><span class=pl-kos>{</span><span class=pl-s1>self</span>.<span class=pl-s1>email</span><span class=pl-kos>}</span></span>&#39;, &#39;<span class=pl-s1><span class=pl-kos>{</span><span class=pl-s1>self</span>.<span class=pl-s1>password</span><span class=pl-kos>}</span></span>&#39;)&quot;</span></td>
-      </tr>
-      <tr>
-        <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
-        <td id="LC31" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
-        <td id="LC32" class="blob-code blob-code-inner js-file-line"><span class=pl-c># -------------------------------------------------------------------------------</span></td>
-      </tr>
-      <tr>
-        <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
-        <td id="LC33" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
-        <td id="LC34" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
-        <td id="LC35" class="blob-code blob-code-inner js-file-line"><span class=pl-k>class</span> <span class=pl-v>Workshop</span>(<span class=pl-s1>db</span>.<span class=pl-v>Model</span>):</td>
-      </tr>
-      <tr>
-        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
-        <td id="LC36" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
-        <td id="LC37" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>__tablename__</span> <span class=pl-c1>=</span> <span class=pl-s>&#39;workshop&#39;</span></td>
-      </tr>
-      <tr>
-        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
-        <td id="LC38" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
-        <td id="LC39" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>id</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>Integer</span>, <span class=pl-s1>primary_key</span><span class=pl-c1>=</span><span class=pl-c1>True</span>, <span class=pl-s1>autoincrement</span><span class=pl-c1>=</span><span class=pl-c1>True</span>)</td>
-      </tr>
-      <tr>
-        <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
-        <td id="LC40" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
-        <td id="LC41" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>host</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>Integer</span>, <span class=pl-s1>db</span>.<span class=pl-v>ForeignKey</span>(<span class=pl-s>&#39;user.id&#39;</span>), <span class=pl-s1>nullable</span><span class=pl-c1>=</span><span class=pl-c1>False</span>)</td>
-      </tr>
-      <tr>
-        <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
-        <td id="LC42" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>participants</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-en>relationship</span>(<span class=pl-s>&quot;User&quot;</span>, <span class=pl-s1>secondary</span><span class=pl-c1>=</span><span class=pl-s1>junction_table</span>)</td>
-      </tr>
-      <tr>
-        <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
-        <td id="LC43" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
-        <td id="LC44" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>max_participants</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>Integer</span>, <span class=pl-s1>nullable</span><span class=pl-c1>=</span><span class=pl-c1>True</span>)</td>
-      </tr>
-      <tr>
-        <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
-        <td id="LC45" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>num_participants</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>Integer</span>, <span class=pl-s1>default</span><span class=pl-c1>=</span><span class=pl-c1>0</span>)</td>
-      </tr>
-      <tr>
-        <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
-        <td id="LC46" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
-        <td id="LC47" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>title</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>String</span>(<span class=pl-c1>254</span>), <span class=pl-s1>nullable</span><span class=pl-c1>=</span><span class=pl-c1>False</span>)</td>
-      </tr>
-      <tr>
-        <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
-        <td id="LC48" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>description</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>String</span>(<span class=pl-c1>2000</span>), <span class=pl-s1>nullable</span><span class=pl-c1>=</span><span class=pl-c1>False</span>)</td>
-      </tr>
-      <tr>
-        <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
-        <td id="LC49" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>bio</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>String</span>(<span class=pl-c1>2000</span>), <span class=pl-s1>nullable</span><span class=pl-c1>=</span><span class=pl-c1>False</span>)</td>
-      </tr>
-      <tr>
-        <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
-        <td id="LC50" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>date</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>String</span>(<span class=pl-c1>20</span>), <span class=pl-s1>nullable</span><span class=pl-c1>=</span><span class=pl-c1>False</span>)</td>
-      </tr>
-      <tr>
-        <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
-        <td id="LC51" class="blob-code blob-code-inner js-file-line">    <span class=pl-s1>time</span> <span class=pl-c1>=</span> <span class=pl-s1>db</span>.<span class=pl-v>Column</span>(<span class=pl-s1>db</span>.<span class=pl-v>String</span>(<span class=pl-c1>20</span>), <span class=pl-s1>nullable</span><span class=pl-c1>=</span><span class=pl-c1>False</span>)</td>
-      </tr>
-      <tr>
-        <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
-        <td id="LC52" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
-        <td id="LC53" class="blob-code blob-code-inner js-file-line">    <span class=pl-k>def</span> <span class=pl-en>__repr__</span>(<span class=pl-s1>self</span>):</td>
-      </tr>
-      <tr>
-        <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
-        <td id="LC54" class="blob-code blob-code-inner js-file-line">        <span class=pl-k>return</span> <span class=pl-s>f&quot;Workshop(&#39;<span class=pl-s1><span class=pl-kos>{</span><span class=pl-s1>self</span>.<span class=pl-s1>host</span><span class=pl-kos>}</span></span>&#39;, &#39;<span class=pl-s1><span class=pl-kos>{</span><span class=pl-s1>self</span>.<span class=pl-s1>max_participants</span><span class=pl-kos>}</span></span>&#39;, &#39;<span class=pl-s1><span class=pl-kos>{</span><span class=pl-s1>self</span>.<span class=pl-s1>num_participants</span><span class=pl-kos>}</span></span>&#39;)&quot;</span></td>
-      </tr>
-      <tr>
-        <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
-        <td id="LC55" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
-        <td id="LC56" class="blob-code blob-code-inner js-file-line"><span class=pl-c># -------------------------------------------------------------------------------</span></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class=pl-s1>db</span>.<span class=pl-s1>session</span>.<span class=pl-en>commit</span>()</td>
       </tr>
 </table>
 
@@ -1495,7 +1319,7 @@
             Copy permalink
           </clipboard-copy>
         </li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/rjagetia1/StudyGroupProject/blame/027ce020854c4bfcb41c7fed7f267bb37ddca8ba/studygroup/models.py">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/rjagetia1/StudyGroupProject/blame/027ce020854c4bfcb41c7fed7f267bb37ddca8ba/db_init.py">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/rjagetia1/StudyGroupProject/issues/new">Reference in new issue</a></li>
       </ul>
     </details-menu>
@@ -1521,10 +1345,10 @@
      hidden
      data-tagsearch-url="/rjagetia1/StudyGroupProject/find-definition"
      data-tagsearch-ref="db"
-     data-tagsearch-path="studygroup/models.py"
+     data-tagsearch-path="db_init.py"
      data-tagsearch-lang="Python"
-     data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_symbol&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_symbol&quot;,&quot;repository_id&quot;:330223100,&quot;ref&quot;:&quot;db&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/studygroup/models.py&quot;,&quot;user_id&quot;:47397877}}"
-     data-hydro-click-hmac="cd507cbaf246ba2148acba53fe0368dd02fded2a15b19deee6c621482972ab15">
+     data-hydro-click="{&quot;event_type&quot;:&quot;code_navigation.click_on_symbol&quot;,&quot;payload&quot;:{&quot;action&quot;:&quot;click_on_symbol&quot;,&quot;repository_id&quot;:330223100,&quot;ref&quot;:&quot;db&quot;,&quot;language&quot;:&quot;Python&quot;,&quot;originating_url&quot;:&quot;https://github.com/rjagetia1/StudyGroupProject/blob/db/db_init.py&quot;,&quot;user_id&quot;:47397877}}"
+     data-hydro-click-hmac="5e3fa3db57df6e901cd8fafba8ae304f3d9c2b61d6532176dacade52c95367a0">
   <div class="Popover-message Popover-message--large Popover-message--top-left TagsearchPopover mt-1 mb-4 mx-auto Box box-shadow-large">
     <div class="TagsearchPopover-content js-tagsearch-popover-content overflow-auto" style="will-change:transform;">
     </div>
