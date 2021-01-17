@@ -23,7 +23,7 @@ class User(db.Model):
     email = db.Column(db.String(500), unique=True, nullable=False)
     password = db.Column(db.String(100), unique=False, nullable=False)
 
-    my_workshops = db.relationship('Workshop', backref='host', lazy=True)
+    my_workshops = db.relationship('Workshop', backref='teacher', lazy=True)
     workshops = db.relationship("Workshop", secondary=junction_table)
 
     def __repr__(self):
@@ -54,4 +54,3 @@ class Workshop(db.Model):
         return f"Workshop('{self.host}', '{self.max_participants}', '{self.num_participants}')"
 
 # -------------------------------------------------------------------------------
-

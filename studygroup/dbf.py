@@ -4,17 +4,17 @@
 # -------------------------------------------------------------------------------
 
 from studygroup.models import User, Workshop
-from studygroup import db
+from studygroup import db, bcrypt
 from sys import stderr, exit
-from studygroup.routes import username
 from sqlalchemy import or_
+from flask import session
 
 def get_user():
-    if username is None:
+    if session['username'] is None:
         err = 'Username was not entered'
         print(err, file=stderr)
         exit(1)
-    return User.query.filter_by(email=username).first()
+    return User.query.filter_by(email=session['username']).first()
 
 # --------------------------------------------------
 
@@ -37,15 +37,14 @@ def create_workshop(info):
             date=info["date"],
             time=info["time"]
         )
-        ws.participants.add()
+
+        db.session.add(ws)
+        db.session.commit()
 
     except:
         err = 'Workshop creation failed'
         print(err, file=stderr)
         return err
-
-    db.session.add(ws)
-    db.session.commit()
 
 # --------------------------------------------------
 
@@ -129,19 +128,19 @@ def edit_workshop(info, wid):
 
 def is_host(wid):
     ws = Workshop.query.get(wid)
-    return username == User.query.get(ws.host).email
+    return session['username'] == User.query.get(ws.host).email
 
 # --------------------------------------------------
 
 
 def get_my_workshops():
-    user = get_user()
+    user = User.query.filter_by(email=session['username']).first()
     if user is None:
         err = 'User not found'
         print(err, file=stderr)
         return err
 
-    wss = user.my_workshops()
+    wss = user.my_workshops
     res = []
     for ws in wss:
         res.append(
@@ -160,7 +159,7 @@ def get_my_workshops():
 
 
 def get_signed_workshops():
-    user = get_user()
+    user = User.query.filter_by(email=session['username']).first()
     if user is None:
         err = 'User not found'
         print(err, file=stderr)
@@ -168,8 +167,7 @@ def get_signed_workshops():
 
     wss = user.workshops
     res = []
-    for id in wss:
-        ws = Workshop.query.get(id)
+    for ws in wss:
         res.append(
             {
                 "id": ws.id,
@@ -184,6 +182,12 @@ def get_signed_workshops():
         )
     return res
 
+def is_signed_up(wid):
+    user = User.query.filter_by(email=session['username']).first()
+    ws = Workshop.query.get(wid)
+    print(ws.participants)
+    return user in ws.participants
+
 
 def search(phrase):
     user = get_user()
@@ -194,14 +198,14 @@ def search(phrase):
 
     wss = db.session.query(Workshop).filter(
         or_(
-            Workshop.title.ilike(phrase),
-            Workshop.description.ilike(phrase)
+            Workshop.title.ilike("%" + phrase + "%"),
+            Workshop.description.ilike("%" + phrase + "%")
         )
     ).order_by(
         Workshop.time.desc()
     ).order_by(
         Workshop.date.desc()
-    )
+    ).all()
     res = []
     for ws in wss:
         res.append(
@@ -220,14 +224,30 @@ def search(phrase):
 
 
 def register(email, password):
+    if email is None or password is None or email == "" or password == "":
+        return -2
+
+    user = User.query.filter_by(email=email).first()
+    if user is not None:
+        return -1
+
     user = User(email=email, password=password)
     db.session.add(user)
     db.session.commit()
+    return 0
+
+def login(email, password):
+    if email is None or password is None or email == "" or password == "":
+        return -3
+    user = User.query.filter_by(email=email).first()
+    if user is None:
+        return -1
+    user = User.query.filter_by(email=email, password=password).first()
+    if user is None:
+        return -2
+    session['username'] = email
+    return 0
 
 
 def is_logged_in():
-    return username is not None
-
-
-def is_registered(username):
-    return User.query.filter_by(User.email == username)
+    return session['username'] is not None

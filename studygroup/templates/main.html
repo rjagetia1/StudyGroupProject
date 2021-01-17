@@ -27,7 +27,7 @@
                   <a href="{{url_for('my_workshops', username=username)}}" class="nav-link">My Sessions</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#classModal">Create a session</a>
+                  <a href="{{url_for('main', username=username)}}" class="nav-link" data-bs-toggle="modal" data-bs-target="#classModal">Create a session</a>
                 </li>
             </ul>
         </div>
@@ -43,29 +43,40 @@
                     <input type="submit" class="btn btn-primary"></input>
                 </div>
             </div>
-        </form> 
+        </form>
     </div>
-    
+
     <div class = "container">
-        {% for i in range(5): %}
-            <div class="card mb-3">
-                <div class="row">
-                    <div class="col">
-                        <div class="card-body">
-                        <h5 class="card-title">Class {{ i + 1 }}</h5>
-                        <p class="card-text">Date & Time</p>
-                        <p class="card-text">Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit iste. Perspiciatis maxime exercitationem delectus tempore eius. Excepturi, pariatur voluptatem?</p>
-                        <p class="card-text">Instructor Bio - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur aliquid earum voluptates doloremque ipsum similique odio quidem ad ea!</p>
+      <div class = "row">
+        {% for card in results: %}
+          {% if is_host(card.id) or is_signed_up(card.id): %}
+            <div class = "d-none"></div>
+          {% else: %}
+              <div class = "col-lg-3 offset-1">
+                <div class="card mb-3" style = "width: 18rem">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-body">
+                            <h5 class="card-title">{{card.title}}</h5>
+                            <p class="card-text">Date - {{card.date}}</p>
+                            <p class="card-text">Time - {{card.time}}</p>
+                            <p class="card-text">Description - {{card.description}}</p>
+                            <p class="card-text">Instructor Bio - {{card.bio}}</p>
+                            <p class="card-text">Capacity - {{card.num_parps}}/{{card.max_parps}}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class = "row">
-                        <div class = "col offset-5 my-3">
-                            <button class="btn btn-primary">Sign up</button>
+                        <div class = "row">
+                            <div class = "col offset-5 my-3">
+                                <a href="{{url_for('main', button_id=card.id)}}" class="btn btn-primary">Sign up</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+              </div>
+          {% endif %}
         {% endfor %}
+      </div>
+    </div>
 
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">

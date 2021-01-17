@@ -12,7 +12,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-5">
-        <a href="{{url_for('main')}}" class="navbar-brand">
+        <a href="{{url_for('main', username=username)}}" class="navbar-brand">
             <h3 class="mb-0 px-3">Study Group</h3>
         </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNavbar">
@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a href="{{url_for('my_workshops')}}" class="nav-link">My Sessions</a>
+                  <a href="{{url_for('my_workshops', username=username)}}" class="nav-link">My Sessions</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#classModal">Create a session</a>
@@ -29,29 +29,32 @@
             </ul>
         </div>
       </nav>
-    
-    <div class = "container mb-4">
-        <h1> Workshops I've signed up for</h1>
-        {% for i in range (2): %}
-            <div class="card mb-3">
+
+    <div class = "container my-4">
+        <h1 class = "mb-5"> Workshops I've signed up for</h1>
+        <div class = "row">
+        {% for card in signed_up_workshops: %}
+          <div class = "col-lg-3 offset-1">
+            <div class="card mb-3 p-3" style = "width: 18rem">
                 <div class="row">
                     <div class="col">
-                        <div class="card-body">
-                        <h5 class="card-title">Class {{ i + 1 }}</h5>
-                        <p class="card-text">Date & Time</p>
-                        <p class="card-text">Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit iste. Perspiciatis maxime exercitationem delectus tempore eius. Excepturi, pariatur voluptatem?</p>
-                        <p class="card-text">Instructor Bio - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur aliquid earum voluptates doloremque ipsum similique odio quidem ad ea!</p>
-                        </div>
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <p class="card-text">Date - {{card.date}}</p>
+                        <p class="card-text">Time - {{card.time}}</p>
+                        <p class="card-text">Description - {{card.description}}</p>
+                        <p class="card-text">Instructor Bio - {{card.bio}}</p>
+                        <p class="card-text">Capacity - {{card.num_parps}}/{{card.max_parps}}</p>
                     </div>
-                    <div class = "row">
-                        <div class = "col offset-5 my-3">
-                            <a href="#" class="btn btn-primary">Cancel</a>
-                            <a href="#" class = "btn btn-primary">Learn more</a>
-                        </div>
+                </div>
+                <div class = "row">
+                    <div class = "col offset-5 my-3">
+                        <a href="{{url_for('my_workshops', cancel_id = card.id)}}" class="btn btn-primary">Cancel</a>
                     </div>
                 </div>
             </div>
+          </div>
         {% endfor %}
+      </div>
     </div>
 
     <div class = "container">
@@ -59,110 +62,74 @@
     </div>
 
     <div class = "container">
-        <h1>Workshops I am hosting</h1>
-        {% for i in range (2): %}
-            <div class="card mb-3">
-                <div class="row">
-                    <div class="col">
-                        <div class="card-body">
-                        <h5 class="card-title">Class {{ i + 1 }}</h5>
-                        <p class="card-text">Date & Time</p>
-                        <p class="card-text">Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit iste. Perspiciatis maxime exercitationem delectus tempore eius. Excepturi, pariatur voluptatem?</p>
-                        <p class="card-text">Instructor Bio - Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur aliquid earum voluptates doloremque ipsum similique odio quidem ad ea!</p>
-                        </div>
-                    </div>
-                    <div class = "row">
-                        <div class = "col offset-5 my-3">
-                            <a href="#" class="btn btn-primary">Cancel</a>
-                            <a href="#" class = "btn btn-primary">Edit</a>
-                        </div>
-                    </div>
+        <h1 class = "mb-5">Workshops I am hosting</h1>
+        <div class = "row">
+        {% for card in created_workshops: %}
+          <div class = "col-lg-3 offset-1">
+            <div class="card mb-3 p-3" style = "width: 18rem">
+                <h5 class="card-title">{{card.title}}</h5>
+                <p class="card-text">Date - {{card.date}}</p>
+                <p class="card-text">Time - {{card.time}}</p>
+                <p class="card-text">Description - {{card.description}}</p>
+                <p class="card-text">Instructor Bio - {{card.bio}}</p>
+                <p class="card-text">Capacity - {{card.num_parps}}/{{card.max_parps}}</p>
+              <div class = "row">
+                <div class = "col offset-5 my-3">
+                  <a href="{{url_for('my_workshops', remove_id = card.id)}}" class="btn btn-primary">Cancel</a>
+                  <a href="#" class = "btn btn-primary">Edit</a>
                 </div>
+              </div>
             </div>
+          </div>
         {% endfor %}
-    </div>
-
-        <!-- Modal -->
-    <div class="modal fade" id="classModal" tabindex="-1" aria-labelledby="classModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="classModalLabel">Create a workshop!</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="title" class="col-form-label">Title:</label>
-                <input type="text" class="form-control" id="title">
-              </div>
-              <div class="mb-3">
-                <label for="description" class="col-form-label">Description:</label>
-                <textarea class="form-control" id="description"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="bio" class="col-form-label">Your Bio:</label>
-                <textarea class="form-control" id="bio"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="time" class="col-form-label">Time:</label>
-                <input type = "time" class="form-control" id="time"></input>
-              </div>
-              <div class="mb-3">
-                <label for="date" class="col-form-label">Date:</label>
-                <input type = "date" class="form-control" id="date"></input>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
       </div>
     </div>
+
 
     <!-- Modal -->
-    <div class="modal fade" id="classModal" tabindex="-1" aria-labelledby="classModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="classModalLabel">Create a workshop!</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal fade" id="classModal" tabindex="-1" aria-labelledby="classModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="classModalLabel">Create a workshop!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method = "POST" action = "{{url_for('my_workshops', username=username)}}">
+            <div class="mb-3">
+                <label for="title" class="col-form-label">Title:</label>
+                <input type="text" class="form-control" id="title" name = "title" maxlength="154" required>
             </div>
-            <div class="modal-body">
-              <form>
-                <div class="mb-3">
-                  <label for="title" class="col-form-label">Title:</label>
-                  <input type="text" class="form-control" id="title">
-                </div>
-                <div class="mb-3">
-                  <label for="description" class="col-form-label">Description:</label>
-                  <textarea class="form-control" id="description"></textarea>
-                </div>
-                <div class="mb-3">
-                  <label for="bio" class="col-form-label">Your Bio:</label>
-                  <textarea class="form-control" id="bio"></textarea>
-                </div>
-                <div class="mb-3">
-                  <label for="time" class="col-form-label">Time:</label>
-                  <input type = "time" class="form-control" id="time"></input>
-                </div>
-                <div class="mb-3">
-                  <label for="date" class="col-form-label">Date:</label>
-                  <input type = "date" class="form-control" id="date"></input>
-                </div>
-              </form>
+            <div class="mb-3">
+                <label for="description" class="col-form-label">Description:</label>
+                <textarea class="form-control" id="description" name = "description" maxlength="2000" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="bio" class="col-form-label">Your Bio:</label>
+                <textarea class="form-control" id="bio" name = "bio" maxlength="2000" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="time" class="col-form-label">Time:</label>
+                <input type = "time" class="form-control" id="time" name = "time" required></input>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="col-form-label">Date:</label>
+                <input type = "date" class="form-control" id="date" name = "date" required></input>
+            </div>
+            <div class="mb-3">
+                <label for="max_parps" class="col-form-label">Max Participants:</label>
+                <input type = "number" class="form-control" id="max_parps" name = "max_parps" required></input>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary"></input>
             </div>
-          </div>
-        </div>
-      </div>
+        </form>
+    </div>
+  </div>
+</div>
 
-    
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 

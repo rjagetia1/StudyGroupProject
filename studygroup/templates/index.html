@@ -16,53 +16,16 @@
           <h3 class="mb-0 px-3">Study Group</h3>
       </a>
     </nav>
-    
-    
+
+
     <div class = "container d-flex justify-content-center">
       <div class "container text-white text-center">
-        <h1> Welcome to NAME HERE!</h1>
+        <h1 class = "mb-5"> Welcome to Study Group!</h1>
+        <div class = "container">
+        <h5 class = "text-danger mb-3"> {{ err }} </h5>
+        </div>
         <a class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
         <a class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="classModal" tabindex="-1" aria-labelledby="classModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="classModalLabel">Create a workshop!</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="title" class="col-form-label">Title:</label>
-                <input type="text" class="form-control" id="title">
-              </div>
-              <div class="mb-3">
-                <label for="description" class="col-form-label">Description:</label>
-                <textarea class="form-control" id="description"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="bio" class="col-form-label">Your Bio:</label>
-                <textarea class="form-control" id="bio"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="time" class="col-form-label">Time:</label>
-                <input type = "time" class="form-control" id="time"></input>
-              </div>
-              <div class="mb-3">
-                <label for="date" class="col-form-label">Date:</label>
-                <input type = "date" class="form-control" id="date"></input>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -75,7 +38,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action = "{{url_for('main')}}",  method = "POST">
+            <form action = "{{url_for('main', username='username')}}",  method = "POST">
               <div class="mb-3">
                 <label for="username" class="col-form-label">E-mail:</label>
                 <input type="email" class="form-control" id="username" name="username">
@@ -92,6 +55,36 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action = "{{url_for('register', username='username')}}",  method = "POST">
+            <div class="mb-3">
+              <label for="username" class="col-form-label">E-mail:</label>
+              <input type="email" class="form-control" id="register_username" name="register_username">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="col-form-label">Password:</label>
+              <input type="password" class="form-control" id="register_password" name = "register_password" maxlength="100">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <input type="submit" class="btn btn-primary"></input>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
